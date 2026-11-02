@@ -35,5 +35,15 @@ recent_transactions = load_json_file('transactions.json')
 # Load purchase orders
 purchase_orders = load_json_file('purchase_orders.json')
 
+# Restocking orders placed through the API. Starts empty and lives in memory only,
+# so it resets on restart. main.py mutates this list in place; do not rebind it.
+submitted_orders = []
+
+# Tasks created through the API. In memory only, resets on restart. The frontend
+# also has its own built-in tasks with small integer ids (1-4), so API task ids
+# are strings ("task-N") to guarantee they never collide with those.
+# main.py mutates this list in place; do not rebind it.
+tasks = []
+
 # All data is now loaded from JSON files in the data/ directory
 # This allows for easier maintenance and updates of the sample data

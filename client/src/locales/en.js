@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -112,7 +113,13 @@ export default {
     onTimeDelivery: 'On-Time Delivery',
     itemsCount: '{count} items',
     quantity: 'Qty',
+    submittedOrders: 'Submitted Orders',
+    submittedEmpty: 'No restocking orders have been submitted yet.',
+    submittedLoadError: 'Submitted orders could not be loaded.',
+    leadTime: 'Lead Time',
+    leadTimeDays: '{count} days',
     table: {
+      submittedDate: 'Submitted',
       orderNumber: 'Order Number',
       orderId: 'Order ID',
       orderDate: 'Order Date',
@@ -126,6 +133,33 @@ export default {
       status: 'Status',
       expectedDelivery: 'Expected Delivery',
       actualDelivery: 'Actual Delivery'
+    }
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Set a budget and restock the items with the largest forecasted demand shortfall',
+    budget: 'Available Budget',
+    plannedSpend: 'Planned Spend',
+    remaining: 'Remaining',
+    recommendations: 'Recommended Items',
+    placeOrder: 'Place Order',
+    submitting: 'Submitting...',
+    empty: 'No items fit within this budget. Increase the budget to see recommendations.',
+    loadError: 'Failed to load recommendations: {message}',
+    orderError: 'Failed to place order: {message}',
+    success: 'Order {orderNumber} submitted for {total}. Expected delivery in {days} days.',
+    viewOrders: 'View in Orders',
+    table: {
+      sku: 'SKU',
+      item: 'Item',
+      category: 'Category',
+      trend: 'Trend',
+      shortfall: 'Shortfall (units)',
+      unitCost: 'Unit Cost',
+      lineCost: 'Line Cost',
+      leadTime: 'Lead Time'
     }
   },
 
@@ -204,6 +238,7 @@ export default {
     shipped: 'Shipped',
     processing: 'Processing',
     backordered: 'Backordered',
+    submitted: 'Submitted',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
     adequate: 'Adequate'
